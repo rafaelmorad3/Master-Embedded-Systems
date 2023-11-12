@@ -1,0 +1,10 @@
+../HAL/LCD.c:125:13:LCD_SendCommand	8	static
+../HAL/LCD.c:154:13:LCD_SendData	8	static
+../HAL/LCD.c:59:6:delay_ms	8	static
+../HAL/LCD.c:65:6:LCD_Init	16	static
+../HAL/LCD.c:103:6:LCD_SendChar	0	static
+../HAL/LCD.c:112:6:LCD_SendString	16	static
+../HAL/LCD.c:177:6:LCD_GoTo	0	static
+../HAL/LCD.c:194:6:LCD_CustomChar	16	static
+../HAL/LCD.c:204:6:LCD_Clear	0	static
+../HAL/LCD.c:210:6:LCD_writeNumber	16	static

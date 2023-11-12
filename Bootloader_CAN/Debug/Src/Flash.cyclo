@@ -1,0 +1,7 @@
+../Src/Flash.c:46:6:Flash_Lock	1
+../Src/Flash.c:56:6:Flash_Unlock	1
+../Src/Flash.c:63:6:Flash_MassErase	2
+../Src/Flash.c:71:6:Flash_ErasePage	3
+../Src/Flash.c:81:6:Flash_ProgramWrite	5
+../Src/Flash.c:99:6:Flash_HalfWord	3
+../Src/Flash.c:109:6:Flash_FullWord	3

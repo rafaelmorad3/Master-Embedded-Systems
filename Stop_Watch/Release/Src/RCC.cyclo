@@ -1,0 +1,2 @@
+../Src/RCC.c:27:6:MRCC_voidInit	3
+../Src/RCC.c:164:14:MRCC_enumSetPeripheralClock	12

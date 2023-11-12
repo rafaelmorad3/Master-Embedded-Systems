@@ -1,0 +1,9 @@
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:15:6:HardFault_Handler	1
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:19:6:MemManage_Handler	1
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:23:6:BusFault_Handler	1
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:27:6:UsageFault_Handler	1
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:33:28:SVC_Handler	1
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:45:6:HW_init	1
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:67:6:trigger_OS_PendSV	1
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:73:6:Start_Ticker	1
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:86:6:SysTick_Handler	1

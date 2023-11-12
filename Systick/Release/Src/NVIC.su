@@ -1,0 +1,16 @@
+../Src/NVIC.c:20:4:DNVIC_EnableIRQ	0	static
+../Src/NVIC.c:31:4:DNVIC_DisableIRQ	0	static
+../Src/NVIC.c:41:4:DNVIC_SetPendingIRQ	0	static
+../Src/NVIC.c:51:4:DNVIC_ClearPendingIRQ	0	static
+../Src/NVIC.c:62:4:DNVIC_GetPendingIRQ	0	static
+../Src/NVIC.c:74:4:DNVIC_GetActive	0	static
+../Src/NVIC.c:84:4:DNVIC_SetPriorityGrouping	0	static
+../Src/NVIC.c:95:4:DNVIC_SetPriority	0	static
+../Src/NVIC.c:106:4:DNVIC_GetPriority	0	static
+../Src/NVIC.c:119:6:DNVIC_voidDisableAllPeripherals	0	static,ignoring_inline_asm
+../Src/NVIC.c:126:6:DNVIC_voidEnableAllPeripherals	0	static,ignoring_inline_asm
+../Src/NVIC.c:132:6:DNVIC_voidDisableAllFaults	0	static,ignoring_inline_asm
+../Src/NVIC.c:140:6:DNVIC_voidEnableAllFaults	0	static,ignoring_inline_asm
+../Src/NVIC.c:146:6:DNVIC_voidSetBASEPRI	0	static,ignoring_inline_asm
+../Src/NVIC.c:152:6:DNVIC_voidChangeVectorOffset	0	static
+../Src/NVIC.c:157:6:DNVIC_voidSysReset	0	static

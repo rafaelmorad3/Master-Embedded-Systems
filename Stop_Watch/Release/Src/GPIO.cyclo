@@ -1,0 +1,9 @@
+../Src/GPIO.c:47:6:GPIO_voidSetPinValue.part.0	6
+../Src/GPIO.c:11:6:GPIO_voidSetPinDirection	8
+../Src/GPIO.c:47:6:GPIO_voidSetPinValue	6
+../Src/GPIO.c:114:4:GPIO_u8GetPinValue	4
+../Src/GPIO.c:133:9:GPIO_voidSetPortDirection	10
+../Src/GPIO.c:168:6:GPIO_voidSetPortValue	4
+../Src/GPIO.c:187:9:GPIO_voidTogglePinValue	3
+../Src/GPIO.c:199:5:GPIO_u16GetPortValue	1
+../Src/GPIO.c:202:6:delay_ms	2

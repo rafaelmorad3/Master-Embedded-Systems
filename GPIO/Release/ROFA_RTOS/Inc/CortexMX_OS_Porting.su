@@ -1,0 +1,9 @@
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:15:6:HardFault_Handler	0	static
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:19:6:MemManage_Handler	0	static
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:23:6:BusFault_Handler	0	static
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:27:6:UsageFault_Handler	0	static
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:33:28:SVC_Handler	0	static,ignoring_inline_asm
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:45:6:HW_init	0	static
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:67:6:trigger_OS_PendSV	0	static
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:73:6:Start_Ticker	0	static
+../ROFA_RTOS/Inc/CortexMX_OS_Porting.c:86:6:SysTick_Handler	8	static

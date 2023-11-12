@@ -1,0 +1,2 @@
+../HAL/KeyPad.c:16:6:KeyPad_Init	16	static
+../HAL/KeyPad.c:31:4:KeyPad_GetKey	16	static

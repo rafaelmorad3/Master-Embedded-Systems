@@ -1,0 +1,10 @@
+../HAL/LCD.c:125:13:LCD_SendCommand	1
+../HAL/LCD.c:154:13:LCD_SendData	1
+../HAL/LCD.c:59:6:delay_ms	2
+../HAL/LCD.c:65:6:LCD_Init	2
+../HAL/LCD.c:103:6:LCD_SendChar	1
+../HAL/LCD.c:112:6:LCD_SendString	2
+../HAL/LCD.c:177:6:LCD_GoTo	5
+../HAL/LCD.c:194:6:LCD_CustomChar	2
+../HAL/LCD.c:204:6:LCD_Clear	1
+../HAL/LCD.c:210:6:LCD_writeNumber	7

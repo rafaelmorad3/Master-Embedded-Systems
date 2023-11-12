@@ -1,0 +1,7 @@
+../Src/Flash.c:46:6:Flash_Lock	4	static
+../Src/Flash.c:56:6:Flash_Unlock	4	static
+../Src/Flash.c:63:6:Flash_MassErase	4	static
+../Src/Flash.c:71:6:Flash_ErasePage	16	static
+../Src/Flash.c:81:6:Flash_ProgramWrite	32	static
+../Src/Flash.c:99:6:Flash_HalfWord	16	static
+../Src/Flash.c:109:6:Flash_FullWord	16	static
