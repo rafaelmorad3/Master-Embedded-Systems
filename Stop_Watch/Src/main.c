@@ -22,13 +22,22 @@
 #include "LCD_Interface.h"
 #include "Systick.h"
 #include "KeyPad.h"
+#include "Segment.h"
+#include "Stop_Watch.h"
 #include <stdint.h>
 
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
+/*
+void delay_ms (u32 d)
+{
+	volatile u32 i=0,c=(d*360);
+	for(i=0 ;i<c ;i++);
+}
 
+*/
 int main(void)
 {
 	MRCC_voidInit();
@@ -40,6 +49,7 @@ int main(void)
 		KeyPad_Init();
 		LCD_GoTo(0,0);
 		LCD_SendChar('A');
+		Stop_Watch_Init();
 	    /* Loop forever */
 		for(;;){
 			//delay_ms(500);
@@ -49,6 +59,7 @@ int main(void)
 			if(c!='N'){
 
 			LCD_writeNumber(c);
+			Stop_Watch();
 			}
 			//GPIO_voidTogglePinValue(PORTA,PIN7);
 		}

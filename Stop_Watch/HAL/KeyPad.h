@@ -15,7 +15,7 @@
 #define KeyPad_Port PORTB
 
 #define ROWS   4
-#define ROW_1  PIN0
+#define ROW_1  PIN0S
 #define ROW_2  PIN1
 #define ROW_3  PIN2
 #define ROW_4  PIN3

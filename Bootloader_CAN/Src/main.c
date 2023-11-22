@@ -17,7 +17,8 @@
  */
 
 #include <stdint.h>
-
+__asm ("ldr r1,=_estack\n"
+				"mov sp, r1");
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif

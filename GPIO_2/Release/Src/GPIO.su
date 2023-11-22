@@ -1,0 +1,7 @@
+../Src/GPIO.c:31:22:Gpio_init	48	static
+../Src/GPIO.c:138:22:Gpio_setPinValue	48	static
+../Src/GPIO.c:171:22:Gpio_setPinnValue	48	static
+../Src/GPIO.c:203:22:Gpio_TGLPin	48	static
+../Src/GPIO.c:222:22:Gpio_readPinValue	48	static
+../Src/GPIO.c:247:22:Gpio_SetAlternateFunction	48	static
+../Src/GPIO.c:293:6:GPIO_voidInitCFG	0	static

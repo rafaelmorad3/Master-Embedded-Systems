@@ -1,0 +1,6 @@
+../APP/Stop_Watch.c:26:6:Stop_Watch_Init	8	static
+../APP/Stop_Watch.c:41:6:STOPWATCH_SyncApp	4	static
+../APP/Stop_Watch.c:52:13:STOPWATCH_EnterTimeValue	8	static
+../APP/Stop_Watch.c:97:13:STOPWATCH_Edit_Time	8	static
+../APP/Stop_Watch.c:141:13:STOPWATCH_START	4	static
+../APP/Stop_Watch.c:153:6:Stop_Watch	8	static

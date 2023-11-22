@@ -26,8 +26,8 @@
 
 
 void Seg_Init(void);
-void Seg_mins (u8 mins);
-void Seg_sec (u8 sec);
+void seg_mins (u8 mins);
+void seg_sec (u8 sec);
 
 
 

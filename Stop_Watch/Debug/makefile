@@ -61,8 +61,8 @@ all: main-build
 main-build: Stop_Watch.elf secondary-outputs
 
 # Tool invocations
-Stop_Watch.elf Stop_Watch.map: $(OBJS) $(USER_OBJS) D:\ARM\Stop_Watch\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Stop_Watch.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\ARM\Stop_Watch\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stop_Watch.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Stop_Watch.elf Stop_Watch.map: $(OBJS) $(USER_OBJS) D:\Master-Embedded-Systems\Stop_Watch\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Stop_Watch.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Master-Embedded-Systems\Stop_Watch\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stop_Watch.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

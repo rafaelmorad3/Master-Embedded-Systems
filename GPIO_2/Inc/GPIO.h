@@ -27,11 +27,11 @@ typedef enum{
 ////////////////////////////////CREATE THIS STRUCT///////////////////////////////////////////////
 typedef struct{
 
-d64 gpio_mode_x;
-d64 gpio_Pull_x	;
-d64 gpio_speed_x;
-d64 gpio_pin_x;
-d64 gpio_port_x;
+u64 gpio_mode_x;
+u64 gpio_Pull_x	;
+u64 gpio_speed_x;
+u64 gpio_pin_x;
+u64 gpio_port_x;
 
 }GpioPinCfg_t;
 
@@ -65,17 +65,17 @@ d64 gpio_port_x;
 #define GPIO_PUPD_u32_PULL_UP								  0x00000001
 #define GPIO_PUPD_u32_PULL_DOWN								0x00000002
 //////////////////////////////STRUCT MODE OPTIONS////////////////////////////////////////
-#define GPIO_MODE_d64_OUTPUT_PP								((d64) 0x0000000000000001)
+#define GPIO_MODE_u64_OUTPUT_PP								((u64) 0x0000000000000001)
 
-#define GPIO_MODE_d64_OUTPUT_OD								((d64) 0x0000000100000001)
+#define GPIO_MODE_u64_OUTPUT_OD								((u64) 0x0000000100000001)
 
-#define GPIO_MODE_d64_INPUT       						    ((d64) 0x0000000000000000)
+#define GPIO_MODE_u64_INPUT       						    ((u64) 0x0000000000000000)
 
-#define GPIO_MODE_d64_AF_PP								    ((d64) 0x0000000000000002)
+#define GPIO_MODE_u64_AF_PP								    ((u64) 0x0000000000000002)
 
-#define GPIO_MODE_d64_AF_OD									((d64) 0x0000000100000002)
+#define GPIO_MODE_u64_AF_OD									((u64) 0x0000000100000002)
 
-#define GPIO_MODE_d64_ANALOG								((d64) 0x0000000000000003)
+#define GPIO_MODE_u64_ANALOG								((u64) 0x0000000000000003)
 
 //////////////////////////////STRUCT SPEED OPTIONS///////////////////////////////////////
 #define GPIO_SPEED_LOW      								(0x00000000)

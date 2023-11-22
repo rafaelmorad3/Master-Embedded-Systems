@@ -45,33 +45,34 @@ Gpio_tenuErrorStatus Gpio_init(GpioPinCfg_t  *Add_CnfgStruct)
 	}
 	else
 	{
+
 		switch(Add_CnfgStruct->gpio_mode_x)
 		{
-			case GPIO_MODE_d64_OUTPUT_PP:
+			case GPIO_MODE_u64_OUTPUT_PP:
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2)   = TRUE;
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2+1) = FALSE;
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_OTYPER,loc_u8_pinNumber)    = FALSE;
 			  break;
-            case GPIO_MODE_d64_OUTPUT_OD:
+            case GPIO_MODE_u64_OUTPUT_OD:
 	   			BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2)   = TRUE;
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2+1) = FALSE;
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_OTYPER,loc_u8_pinNumber)    = TRUE;
 			  break;
-            case GPIO_MODE_d64_INPUT:
+            case GPIO_MODE_u64_INPUT:
 				BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2)   = FALSE;
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2+1) = FALSE;
 			  break;
-            case GPIO_MODE_d64_AF_PP:
+            case GPIO_MODE_u64_AF_PP:
 				BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2)   = FALSE;
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2+1) = TRUE;
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_OTYPER,loc_u8_pinNumber)    = FALSE;
 			  break;
-            case GPIO_MODE_d64_AF_OD:
+            case GPIO_MODE_u64_AF_OD:
 				BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2)   = FALSE;
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2+1) = TRUE;
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_OTYPER,loc_u8_pinNumber)    = TRUE;
 				break;
-            case GPIO_MODE_d64_ANALOG:
+            case GPIO_MODE_u64_ANALOG:
 				BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2)   = TRUE;
 			  BIT_BAND(&loc_ptr_GPIOx[loc_u8_portNumber]->GPIOx_MODER,loc_u8_pinNumber*2+1) = TRUE;
 				break;
@@ -213,7 +214,7 @@ Gpio_tenuErrorStatus Gpio_TGLPin(u8 Copyu8Port ,u8 Copyu8Pin)
 	}
 	else
 	{
-		TGL_BIT(loc_ptr_GPIOx[Copyu8Port]->GPIOx_ODR,Copyu8Pin);
+		ToggleBIT(loc_ptr_GPIOx[Copyu8Port]->GPIOx_ODR,Copyu8Pin);
 
 	}
 	return loc_enu_returnStatus;
@@ -233,7 +234,7 @@ Gpio_tenuErrorStatus Gpio_readPinValue(GpioPinCfg_t  *Add_CnfgStruct , pu32 Add_
 	{
 		loc_enu_returnStatus = Gpio_WrongPinNumError;
 	}
-	else if ( Add_pu8PinValue == PTR_NULL)
+	else if ( Add_pu8PinValue == NULL_PTR)
 	{
 		loc_enu_returnStatus = Gpio_WrongReadError;
 	}

@@ -35,9 +35,9 @@
 /*Negative response struct*/
 typedef struct
 {
-	uint_8t NegativeResponseID;
-	uint_8t ServiceID;
-	uint_8t NRC;
+	u8 NegativeResponseID;
+	u8 ServiceID;
+	u8 NRC;
 
 }NegativeResponse_t;
 
@@ -54,15 +54,15 @@ typedef struct
 
 typedef struct
 {
-	uint_8t ServiceID;
-	uint_8t SessionID;
+	u8 ServiceID;
+	u8 SessionID;
 }DiagSessCtrlReq_t;
 
 typedef struct
 {
-	uint_8t ResponseID;
-	uint_8t SessionID;
-	uint_16t ResponseTime;
+	u8 ResponseID;
+	u8 SessionID;
+	u16 ResponseTime;
 }DiagSessCtrlResponse_t;
 
 /*ECU Reset service*/
@@ -74,14 +74,14 @@ typedef struct
 
 typedef struct
 {
-	uint_8t ServiceID;
-	uint_8t ResetID;
+	u8 ServiceID;
+	u8 ResetID;
 }ECUResetReq_t;
 
 typedef struct
 {
-	uint_8t ResponseID;
-	uint_8t ResetID;
+	u8 ResponseID;
+	u8 ResetID;
 }ECUResetResponse_t;
 
 
@@ -96,28 +96,28 @@ typedef struct
 
 typedef struct
 {
-	uint_8t ServiceID;
-	uint_8t SubFuncID;
+	u8 ServiceID;
+	u8 SubFuncID;
 }RequestSeedReq_t;
 
 typedef struct
 {
-	uint_8t ResponseID;
-	uint_8t SubFuncID;
-	uint_16t Seed;
+	u8 ResponseID;
+	u8 SubFuncID;
+	u16 Seed;
 }RequestSeedResponse_t;
 
 typedef struct
 {
-	uint_8t ServiceID;
-	uint_8t SubFuncID;
-	uint_16t Key;
+	u8 ServiceID;
+	u8 SubFuncID;
+	u16 Key;
 }TransferKeyReq_t;
 
 typedef struct
 {
-	uint_8t ResponseID;
-	uint_8t SubFuncID;
+	u8 ResponseID;
+	u8 SubFuncID;
 }TransferKeyResponse_t;
 
 
@@ -128,16 +128,16 @@ typedef struct
 
 typedef struct
 {
-	uint_8t ServiceID;
-	uint_8t Reserved;
-	uint_16t DataID;
+	u8 ServiceID;
+	u8 Reserved;
+	u16 DataID;
 }ReadDataByIDReq_t;
 
 typedef struct
 {
-	uint_8t ResponseID;
-	uint_8t Reserved [3];
-	uint_32t Data;
+	u8 ResponseID;
+	u8 Reserved [3];
+	u32 Data;
 }ReadDataByIDResponse_t;
 
 
@@ -146,16 +146,16 @@ typedef struct
 #define WRITE_DATA_BY_IDENTIFIER_RESPONSE_SIZE		0x02
 typedef struct
 {
-	uint_8t ServiceID;
-	uint_8t Reserved;
-	uint_16t DataID;
-	uint_32t Data;
+	u8 ServiceID;
+	u8 Reserved;
+	u16 DataID;
+	u32 Data;
 }WriteDataByIDReq_t;
 
 typedef struct
 {
-	uint_8t ResponseID;
-	uint_8t reserved;
+	u8 ResponseID;
+	u8 reserved;
 }WriteDataByIDResponse_t;
 
 #define REQUEST_DOWNLOAD_SERVICE_ID					0x34
@@ -164,16 +164,16 @@ typedef struct
 #define WORD_SIZE									0X04
 typedef struct
 {
-	uint_8t ServiceID;
-	uint_8t MemAddLength;
-	uint_16t AppSize;
+	u8 ServiceID;
+	u8 MemAddLength;
+	u16 AppSize;
 }RequestDownloadReq_t;
 
 typedef struct
 {
-	uint_8t ResponseID;
-	uint_8t Reserved;
-	uint_16t DataBlockSize;
+	u8 ResponseID;
+	u8 Reserved;
+	u16 DataBlockSize;
 }RequestDownloadResponse_t;
 
 
@@ -182,18 +182,18 @@ typedef struct
 #define TRANSFER_DATA_RESPONSE_SIZE					0x04
 typedef struct
 {
-	uint_8t ServiceID;
-	uint_8t BlockNum;
-	uint_16t BlockSize;
-	uint_32t BlockAddress;
-	uint_8t Data [DATA_BLOCK_SIZE];
+	u8 ServiceID;
+	u8 BlockNum;
+	u16 BlockSize;
+	u32 BlockAddress;
+	u8 Data [DATA_BLOCK_SIZE];
 }TransferDataReq_t;
 
 typedef struct
 {
-	uint_8t ResponseID;
-	uint_8t BlockNum;
-	uint_16t CheckSum;
+	u8 ResponseID;
+	u8 BlockNum;
+	u16 CheckSum;
 }TransferDataResponse_t;
 
 #define REQUEST_TRANSFER_EXIT_SERVICE_ID			0x37
@@ -202,14 +202,14 @@ typedef struct
 
 typedef struct
 {
-	uint_8t ServiceID;
-	uint_8t reserved;
+	u8 ServiceID;
+	u8 reserved;
 }ReqTransferExitReq_t;
 
 typedef struct
 {
-	uint_8t ResponseID;
-	uint_8t reserved;
+	u8 ResponseID;
+	u8 reserved;
 
 }ReqTransferExitResponse_t;
 
@@ -225,23 +225,23 @@ typedef struct
 
 typedef struct
 {
-	uint_8t ServiceID;
-	uint_8t ControlRoutineSignalID;
-	uint_16t RoutineID;
+	u8 ServiceID;
+	u8 ControlRoutineSignalID;
+	u16 RoutineID;
 }RoutineControlReq_t;
 
 typedef struct
 {
-	uint_8t ResponseID;
-	uint_8t ControlRoutineSignalID;
-	uint_16t RoutineID;
+	u8 ResponseID;
+	u8 ControlRoutineSignalID;
+	u16 RoutineID;
 }RoutineControlResponse_t;
 
-/*UDS APIs*/
-uint_8t UDS_GetRequest (uint_8t ServiceID, void * RequestData,RxCbf_t cbf);
-uint_8t UDS_SendPositiveResponse (uint_8t ServiceID, void * ResponseData,TxCbf_t cbf );
-uint_8t UDS_SendNegativeResponse (uint_8t ServiceID,uint_8t NRC,RxCbf_t cbf);
+/*UDS APIs*//*
+u8 UDS_GetRequest (u8 ServiceID, void * RequestData,RxCbf_t cbf);
+u8 UDS_SendPositiveResponse (u8 ServiceID, void * ResponseData,TxCbf_t cbf );
+u8 UDS_SendNegativeResponse (u8 ServiceID,u8 NRC,RxCbf_t cbf);
 
-
+*/
 #endif /* APP_INCLUDE_UDS_H_ */
 
